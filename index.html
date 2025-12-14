@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ===========================
+          CUSTOM CSS AESTHETIC
+    =============================== -->
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: #fdf5f7;
+            color: #444;
+            scroll-behavior: smooth;
+        }
+
+        /* Fade in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.2s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #ffffffd8 !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #d63384 !important;
+        }
+        .nav-link {
+            color: #444 !important;
+            margin-left: 10px;
+            transition: 0.3s;
+            font-weight: 600;
+        }
+        .nav-link:hover,
+        .nav-link.active {
+            color: #d63384 !important;
+        }
+
+        /* HOME */
+        #home .home-card {
+            background: rgba(255, 255, 255, 0.55);
+            padding: 3rem;
+            border-radius: 25px;
+            border: 2px solid #fff;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+        }
+
+        .btn-theme {
+            border-radius: 30px;
+            padding: 12px 25px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        .btn-theme-success {
+            background: #d63384;
+            border: none;
+            color: white;
+        }
+        .btn-theme-success:hover {
+            background: #b0266c;
+        }
+        .btn-theme-light {
+            background: white;
+            border: 2px solid #d63384;
+            color: #d63384;
+        }
+        .btn-theme-light:hover {
+            background: #ffe3ef;
+        }
+
+        /* About */
+        #about img {
+            box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+        }
+        .list-group-item {
+            border: none;
+            background: #ffe9f2;
+            margin-bottom: 8px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        /* Travel */
+        #travel {
+            background: #2a2a2a;
+        }
+        #travel img {
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        #travel img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 25px rgba(255,255,255,0.1);
+        }
+
+        /* Contact */
+        #contact input,
+        #contact textarea {
+            border-radius: 12px;
+            border: none;
+            padding: 12px;
+        }
+        #contact input:focus,
+        #contact textarea:focus {
+            outline: 2px solid #d63384;
+        }
+
+        /* Footer */
+        footer {
+            background: #ffd6e8 !important;
+        }
+        footer p {
+            margin: 0;
+            font-weight: 600;
+            color: #444;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav id="scrolling_navbar" class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Portofolio Susi</a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav fw-bold">
+             <ul class="navbar-nav fw-bold">
+  <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+  <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+  <li class="nav-item"><a class="nav-link" href="#travel">Travel</a></li>
+  <li class="nav-item"><a class="nav-link" href="view_data.php">Sertifikat</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+  <li class="nav-item">
+      <a class="nav-link text-danger" href="logout.php">Logout</a>
+  </li>
+</ul>
+
+          </div>
+
+        </div>
+    </nav>
+
+    <!-- CONTENT WRAPPER -->
+    <div data-bs-spy="scroll" data-bs-target="#scrolling_navbar" data-bs-smooth-scroll="true">
+
+        <!-- HOME -->
+        <section class="min-vh-100 d-flex align-items-center fade-in" id="home"
+        style="background-image: url('image/home.jpg'); background-size: cover;">
+
+          <div class="container d-flex justify-content-center">
+              <div class="home-card text-center">
+
+                <img src="image/aku.png" class="img-fluid col-lg-2 col-sm-6 mb-4"> 
+
+                <p class="display-4 text-secondary fw-bold mb-3">
+                    Susi Lanna Sari Siregar
+                </p>
+
+                <p class="text-secondary fs-5 mb-4">
+                    Halo! Saya Susi, seorang Mahasiswa yang gemar <b>membaca</b> dan <b>menulis</b>.
+                    Saya senang belajar hal baru dan mengembangkan diri.
+                </p>
+
+                <a class="btn-theme btn-theme-success mb-3" href="#about">Tentang Saya</a>
+                <a class="btn-theme btn-theme-light mb-3" href="#contact">Kontak</a>
+
+              </div>
+          </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="container py-5 fade-in" id="about">
+            <div class="text-center py-4">
+                <h2 class="fw-bolder">Tentang Saya</h2>
+                <p class="fs-5">Profil singkat tentang Susi</p>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-4">
+                    <img class="img-fluid rounded-5" src="image/foto1.png">
+                </div>
+
+                <div class="col-lg-7 offset-lg-1">
+                    <p class="lh-lg mb-3">
+                        Halo! Nama saya <b>Susi Lanna Sari Siregar</b>. Saya lahir di 
+                        <b>Batam, 21 September 2007</b> dan tinggal di 
+                        <b>Padang Lawas, Sumatra Utara</b>.
+                    </p>
+
+                    <p>
+                        Saya adalah Mahasiswa dari <b>Universitas Islam Negeri M.Djamil Djambek Bukittinggi </b>.  
+                        Saya hobi <b>membaca</b>, <b>menulis</b> dan suka belajar banyak hal baru.
+                    </p>
+
+                    <h3 class="fw-bold fs-4 mt-4">Biodata</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Nama: Susi Lanna Sari Siregar</li>
+                        <li class="list-group-item">TTL: Batam, 21 September 2007</li>
+                        <li class="list-group-item">Jenis Kelamin: Perempuan</li>
+                        <li class="list-group-item">Agama: Islam</li>
+                        <li class="list-group-item">Alamat: Padang Lawas, Sumatra Utara</li>
+                        <li class="list-group-item">Pendidikan: Madrasah Aliyah</li>
+                        <li class="list-group-item">Hobi: Membaca dan Menulis</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRAVEL -->
+        <section class="py-5 text-white fade-in" id="travel">
+            <div class="container">
+
+                <div class="text-center py-4">
+                    <h2 class="fw-bolder">Travel</h2>
+                    <p class="fs-5">Beberapa perjalanan yang saya kunjungi</p>
+                </div>
+
+                <div class="row pb-4">
+                    <div class="col-6 col-lg-3 mb-4">
+                      <img class="w-100 img-thumbnail" src="image/foto2.jpeg">
+                    </div>
+                    <div class="col-6 col-lg-3 mb-4">
+                      <img class="w-100 img-thumbnail" src="image//foto3.jpeg">
+                    </div>
+                    <div class="col-6 col-lg-3 mb-4">
+                      <img class="w-100 img-thumbnail" src="image/foto7.jpeg">
+                    </div>
+                    <div class="col-6 col-lg-3 mb-4">
+                      <img class="w-100 img-thumbnail" src="image/foto6.jpeg">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="py-5 fade-in" id="contact" style="background:#2a2a2a">
+            <div class="container">
+                <div class="text-white text-center py-4">
+                    <h2 class="fw-bolder">Kontak</h2>
+                    <p class="fs-5">Hubungi saya melalui form ini</p>
+                    <p>Email: <b>susilannasari@gmail.com</b></p>
+                    <p>No HP: <b>082160199718</b></p>
+                </div>
+
+                <div class="col-lg-7 mx-auto">
+                    <form class="text-white fs-6">
+                        <div class="mb-3">
+                            <label class="form-label">Nama</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Subjek</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Pesan</label>
+                            <textarea rows="5" class="form-control"></textarea>
+                        </div>
+
+                        <div class="d-grid col-lg-4 mx-auto">
+                            <button class="btn-theme btn-theme-success">Kirim</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-light">
+            <div class="container">
+                <p class="text-center py-4 mb-0">
+                    © 2025 Portofolio Susi Lanna Sari Siregar
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- SCRIPT -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
